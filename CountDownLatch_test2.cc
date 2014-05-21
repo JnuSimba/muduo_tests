@@ -40,13 +40,14 @@ class Test
   void threadFunc()
   {
     sleep(3);
-    latch_.countDown();
+    
     printf("tid=%d, %s started\n",
            CurrentThread::tid(),
            CurrentThread::name());
 
     
-
+    latch_.countDown();
+    
     printf("tid=%d, %s stopped\n",
            CurrentThread::tid(),
            CurrentThread::name());
